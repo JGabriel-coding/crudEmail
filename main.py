@@ -11,8 +11,8 @@ def root():
 @app.post("/create-email")
 async def read_root():
     with sync_playwright() as playwright:
-        name = "joaobotTest"
-        password = "#Ref@2023"
+        name = "userdoAD"
+        password = "senha_Padrão"
         createemail(name, password, playwright)
     return {'enviar, dados completos da pessoa'}
 
