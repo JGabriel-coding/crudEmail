@@ -11,8 +11,8 @@ async def createemail(name:str,password:str, playwright: Playwright) -> None:
     await page.wait_for_timeout(5000)
 
     
-    await page.locator("input[name=\"email\"]").fill("joao.teixeira@referenciaseguros.com.br")
-    await page.locator("input[name=\"password\"]").fill("23J@2b9Ff")
+    await page.locator("input[name=\"email\"]").fill("seuEmailDoPipeRun")
+    await page.locator("input[name=\"password\"]").fill("suaSenha")
     await page.locator("input[name=\"password\"]").press("Enter")
     await page.locator("#hpanel_tracking-home-manage_button").click()
     x = "referencia"
@@ -35,6 +35,6 @@ async def createemail(name:str,password:str, playwright: Playwright) -> None:
     
 async def main(): 
    async with sync_playwright() as playwright:
-        name = "joaobotTest"
-        password = "#Ref@2023"
+        name = "UserAD"
+        password = "Senha_Gerada"
         await createemail(name, password, playwright)
